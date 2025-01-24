@@ -1,9 +1,9 @@
 'use client'
 
 import { ChevronUp } from 'lucide-react'
-import { Button } from '../ui/button'
 import Link from 'next/link'
 import { APP_NAME } from '@/lib/constants'
+import { Button } from '@/components/ui/button'
 
 export default function Footer() {
   return (
@@ -25,10 +25,10 @@ export default function Footer() {
           <Link href='/page/help'>Help</Link>
         </div>
         <div className='flex justify-center text-sm'>
-          <p> © 2000-2024, {APP_NAME}, Inc. or its affiliates</p>
+          <p> © copyright {APP_NAME}</p>
         </div>
         <div className='mt-8 flex justify-center text-sm text-gray-400'>
-          123, Main Street, Anytown, CA, Zip 12345 | +1 (123) 456-7890
+          <p>Powered by {APP_NAME}</p>
         </div>
       </div>
     </footer>
