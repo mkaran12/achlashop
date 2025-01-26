@@ -1,4 +1,12 @@
 import mongoose from 'mongoose'
+import {
+  CartSchema,
+  OrderItemSchema,
+  // ProductInputSchema,
+} from '@/lib/validator'
+import { z } from 'zod'
+export type OrderItem = z.infer<typeof OrderItemSchema>
+export type Cart = z.infer<typeof CartSchema>
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cached = (global as any).mongoose || { conn: null, promise: null }
 
